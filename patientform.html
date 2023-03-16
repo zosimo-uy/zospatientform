@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <title>Document</title>
+</head>
+<body>
+  <a href="index.html">Back to Home</a>
+  <div class="top-area ms-5 me-5 col-md">
+    <h2>Patient Form</h2>
+    <p>Welcome, user</p>
+  </div>
+
+   <form action="" id="patientForm" class="m-3">
+
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control" id="patientID" name="patientID" required>
+        <label for="patientID">Patient ID*</label>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control row" name="firstName" id="firstName" required>
+        <label for="firstName">First Name*</label>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control row" name="middleName" id="middleName">
+        <label for="middleName">Middle Name</label>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control row" name="lastName" id="lastName" required>
+        <label for="lastName">Last Name*</label>
+      </div>
+    </div>
+
+    
+    <div class="row">
+      <div class="col">
+        <input type="text" class="form-control row w-75 ms-1" id="userAddress" name="userAddress"required>
+        <label for="userAddress">Address*</label>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <input type="date" class="form-control row" name="birthDate" id="birthDate" min="01-01-1945" max="current" required>
+        <label for="birthDate">Date of Birth*</label>
+      </div>
+      <div class="col">
+        <input type="text" class="form-control row" name="contactNumber" id="contactNumber" required>
+        <label for="contactNumber">Contact Number*</label>
+      </div>
+      
+      <div class="col-sm">
+        <label for="gender">Gender*</label>
+        <label for="male">Male</label>
+        <input type="radio" class="form" value="Male" name="gender" id="Gender" >
+        <label for="female">Female</label>
+        <input type="radio" class="form" value="Female" name="gender" id="Gender">
+      </div>
+    </div>
+    <div class="row">
+      <h2 class="mt-5">Medical Information</h2>
+      <p>Medical History</p>
+      <div class="col-4">
+        <div class="row">
+          <span><input type="checkbox" id="Asthma" name="medicalHistory"><label for="Asthma">Asthma</label></span>
+          <span><input type="checkbox" id="Cancer" name="medicalHistory"><label for="Cancer">Cancer</label></span>
+          <span><input type="checkbox" id="cardicDisease" name="medicalHistory"><label for="cardicDisease">Cardiac Disease</label></span>
+          <span><input type="checkbox" id="Diabetes" name="medicalHistory"><label for="Diabetes">Diabetes</label></span>
+          <span><input type="checkbox" id="Hypertension" name="medicalHistory"><label for="Hypertension">Hypertension</label></span>
+          <span><input type="checkbox" id="psychiatricDisorder" name="medicalHistory"><label for="psychiatricDisorder">Psychratric Disorder</label></span>
+          <span><input type="checkbox" id="Epilepsy" name="medicalHistory"><label for="Epilepsy">Epilepsy</label></span>
+          <span><input type="checkbox" id="Others" name="medicalHistory"><label for="Others">Others</label></span>
+          <span><input type="checkbox" id="None" name="medicalHistory"><label for="None">None</label></span>
+        </div>
+      </div>
+      <div class="col">
+        <h2>Current Symptoms</h2>
+        <select name="Symptoms" id="currentSymptoms" multiple>
+          <option value="Chestpain">Chestpain</option>
+          <option value="Respiratory">Respiratory</option>
+          <option value="Hematological">Hematological</option>
+          <option value="Lymphatic">Lymphatic</option>
+          <option value="Neurological">Neurological</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <p>Are you currently taking medication?</p>
+        <div class="col">
+          <span><input onclick="showInput()"type="radio" value="yes" name="medication" id="radio" value="yes"><label for="yes">Yes</label></span>
+          <span><input onclick="hideInput()" type="radio" value="no" name="medication" id="radio1" value="no"><label for="no">No</label></span>
+          <input type="text" id="medicationBox" name="med3" class="mt-3">
+        </div>
+        <button class="btn btn-success mt-3" type="submit" id="submitBtn">Submit</button>
+      </div>
+    </div>
+   </form>
+
+  <!-- <div id="display">
+    <h2>Patient info</h2>
+    <pre></pre>
+  </div> -->
+
+
+
+  <script src="index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
