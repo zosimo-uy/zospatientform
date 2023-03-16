@@ -8,28 +8,29 @@
   <title>Document</title>
 </head>
 <body>
-  <a href="index.html">Back to Home</a>
+  <a href="index.html" class="btn btn-success m-3">Back to Home</a>
   <div class="top-area ms-5 me-5 col-md">
     <h2>Patient Form</h2>
     <p>Welcome, user</p>
   </div>
 
-   <form action="" id="patientForm" class="m-3">
+   <form action="" id="patientForm" class="m-3 col-sm">
 
     <div class="row">
-      <div class="col">
-        <input type="text" class="form-control" id="patientID" name="patientID" required>
+      <h3 class="bg-info p-2 border-rounded rounded-1">Patient information</h3>
+      <div class="col-sm">
+        <input type="text" class="form-control row" id="patientID" name="patientID" required>
         <label for="patientID">Patient ID*</label>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <input type="text" class="form-control row" name="firstName" id="firstName" required>
         <label for="firstName">First Name*</label>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <input type="text" class="form-control row" name="middleName" id="middleName">
         <label for="middleName">Middle Name</label>
       </div>
-      <div class="col">
+      <div class="col-sm">
         <input type="text" class="form-control row" name="lastName" id="lastName" required>
         <label for="lastName">Last Name*</label>
       </div>
@@ -38,7 +39,7 @@
     
     <div class="row">
       <div class="col">
-        <input type="text" class="form-control row w-75 ms-1" id="userAddress" name="userAddress"required>
+        <input type="text" class="form-control row w-75" id="userAddress" name="userAddress"required>
         <label for="userAddress">Address*</label>
       </div>
     </div>
@@ -62,23 +63,23 @@
       </div>
     </div>
     <div class="row">
-      <h2 class="mt-5">Medical Information</h2>
-      <p>Medical History</p>
+      <h3 class="mt-5 bg-info p-2 border-rounded rounded-1">Medical Information</h3>
+      <p><strong>Medical History</strong></p>
       <div class="col-4">
         <div class="row">
-          <span><input type="checkbox" id="Asthma" name="medicalHistory"><label for="Asthma">Asthma</label></span>
-          <span><input type="checkbox" id="Cancer" name="medicalHistory"><label for="Cancer">Cancer</label></span>
-          <span><input type="checkbox" id="cardicDisease" name="medicalHistory"><label for="cardicDisease">Cardiac Disease</label></span>
-          <span><input type="checkbox" id="Diabetes" name="medicalHistory"><label for="Diabetes">Diabetes</label></span>
-          <span><input type="checkbox" id="Hypertension" name="medicalHistory"><label for="Hypertension">Hypertension</label></span>
-          <span><input type="checkbox" id="psychiatricDisorder" name="medicalHistory"><label for="psychiatricDisorder">Psychratric Disorder</label></span>
-          <span><input type="checkbox" id="Epilepsy" name="medicalHistory"><label for="Epilepsy">Epilepsy</label></span>
-          <span><input type="checkbox" id="Others" name="medicalHistory"><label for="Others">Others</label></span>
-          <span><input type="checkbox" id="None" name="medicalHistory"><label for="None">None</label></span>
+          <span><input type="checkbox" id="Asthma" name="medicalHistory" value="Asthma"><label for="Asthma">Asthma</label></span>
+          <span><input type="checkbox" id="Cancer" name="medicalHistory" value="Cancer"><label for="Cancer">Cancer</label></span>
+          <span><input type="checkbox" id="cardicDisease" name="medicalHistory" value="cardicDisease"><label for="cardicDisease">Cardiac Disease</label></span>
+          <span><input type="checkbox" id="Diabetes" name="medicalHistory"value="Diabetes"><label for="Diabetes">Diabetes</label></span>
+          <span><input type="checkbox" id="Hypertension" name="medicalHistory"value="Hypertension"><label for="Hypertension">Hypertension</label></span>
+          <span><input type="checkbox" id="psychiatricDisorder" name="medicalHistory" value="psychiatricDisorder"><label for="psychiatricDisorder">Psychratric Disorder</label></span>
+          <span><input type="checkbox" id="Epilepsy" name="medicalHistory"value="Epilepsy"><label for="Epilepsy">Epilepsy</label></span>
+          <span><input type="checkbox" id="Others" name="medicalHistory"value="Others"><label for="Others">Others</label></span>
+          <span><input type="checkbox" id="None" name="medicalHistory"value="None"><label for="None">None</label></span>
         </div>
       </div>
       <div class="col">
-        <h2>Current Symptoms</h2>
+        <h5>Current Symptoms</h5>
         <select name="Symptoms" id="currentSymptoms" multiple>
           <option value="Chestpain">Chestpain</option>
           <option value="Respiratory">Respiratory</option>

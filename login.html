@@ -18,27 +18,29 @@ html{
   height: 100%;
 }
 
+
+
 </style>
 <body>
   
   <main class="form-signin m-auto position-absolute top-50 start-50 translate-middle">
-    <form action="" id="loginForm">
+    <form action="#" id="loginForm">
       <img class="mb-4" src="medic.png" alt="" width="100" h eight="57">
       <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
   
       <div class="form">
         <label for="username" class="col-sm-2 col-form-label">Username</label>
-        <input type="text" class="form-control" name="username" id="username" placeholder="Input your username: User">
+        <input type="text" class="form-control" name="username" id="username" placeholder="Input your username: User" required>
         <span class="errorMessage"></span>
       </div>
       <div class="form">
         <label for="password" class="col-sm-2 col-form-label">Password</label>
-        <input type="password" class="form-control" name="password" id="password" placeholder="Input your username: pword>
+        <input type="password" class="form-control" name="password" id="password" required placeholder="Input your username: pword">
         <span class="errorMessage"></span>
       </div>
-      <a href="patientform.html" class="w-100 btn btn-lg btn-primary mt-2" id="taengButton" type="button" value="Create">Sign In</a>
+      <button class="btn btn-success mt-3" type="submit"><a href="patientform.html" class="btn text-white">Login</a></button>
       <span id="messageEl"></span>
-      <p><a href="index.html" class="mt-2">Back to Home</a></p>
+      <p><a href="index.html" class="mt-2 btn btn-secondary">Back to Home</a></p>
     </form>
   </main>
 
