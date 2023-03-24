@@ -1,6 +1,5 @@
 //login page
 
-
 class ValidateForm {
   constructor(form,fields){
       this.form = form;
@@ -25,26 +24,40 @@ class ValidateForm {
   }
   
   validateFields(field){
+        //declare global variable
+        let userName = document.getElementById("username").value;
+        let passWord = document.getElementById("password").value;
+        //Test if usewr could pass data
+            // alert(userName);
+            // alert(passWord);
+        let accountData = JSON.parse(localStorage.getItem('Account'));//get the data from the local storage
       // let message = document.getElementsByClassName("errorMessage")
-      let messageEl = document.getElementById("messageEl")
-     
-      let error1 = field.previousElementSibling;
-      let error2 = field.nextElementSibling;
-      console.log(error1)
-      console.log(error2)
-      console.log(error2)
-      if(field.value.trim() === ""){
-              error2.innerHTML = `Input is mandatory in ${error1.innerHTML}`;
-          }else {
-              messageEl.textContent = "Successful";
-      }
-  }
+      let messageEl = document.getElementById("messageEl");
+
+      if (userName == accountData.username && passWord == accountData.password) {
+        //debugging purposes
+        // alert(${userName} = ${accountData.username} 
+        // ----${passWord}=${accountData.password});
+
+        //direct in other page if the credentials matches
+        window.open('patientform.html');
+
+    }else{
+        alert(`Credentials incorrect please try again`);
+        messageEl.innerText = `Incorrect login information`;
+        messageEl.style.color = 'Red';
+        messageEl.style.fontSize = `20px`;
+        messageEl.style.fontWeight = `bold`;
+        alert(`please use the the placeholder title`)
+        }
+     }
 
   validateOnSubmit() {
       
       let selfForm = this;
       this.form.addEventListener("submit", (event)=>{
           event.preventDefault();
+
           selfForm.fields.forEach( field => {
               let input = document.querySelector(`#${field}`)
               selfForm.validateFields(input);
@@ -60,19 +73,46 @@ let newAccount = new ValidateForm(disForm,disField);
 
 newAccount.initialized();
 
-// //boolean buttons
+//creating an object
+let account={
+    username: "admin",
+    password: "admin"
+}
 
-// let button = 0;
-// const radio = document.querySelector(`input[name="gender"]`);
+localStorage.setItem('Account',JSON.stringify(account));
 
-// function checkRadio(){
-//   for (let i =0; i < radio.length; i++)
-//   {
-//       if (radio[i].checked){
-//           a=1;
-//           break;
-//       }else{
-//           a==0;
-//       }
+
+// function loginAccount(){
+//             //declare global variable
+//         let userName = document.getElementById("username").value;
+//         let passWord = document.getElementById("password").value;
+//         //Test if usewr could pass data
+//             // alert(userName);
+//             // alert(passWord);
+//         let accountData = JSON.parse(localStorage.getItem('Account'));//get the data from the local storage
+
+//         //compare the data from the local storage
+//         if (userName == accountData.username && passWord == accountData.password) {
+//                     //debugging purposes
+//                     // alert(${userName} = ${accountData.username} 
+//                     // ----${passWord}=${accountData.password});
+
+//                     //direct in other page if the credentials matches
+//                     window.open('patientform.html');
+
+//         }
+//         else{
+//             alert(`Does not Match`);
+//         }
+// }
+// function navigateToPage(event) {
+//     event.preventDefault(); // Prevent the default link behavior
+//     window.location.assign('next.html'); // Navigate to the link
 //   }
+// //getting data from user
+// window.onload = function(){
+//     //get the id of the form
+//     let loginFormId = document.getElementById('loginForm');
+//     loginFormId.onsubmit = loginAccount;
+
 // }

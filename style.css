@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Poppin, sans-serif;
 }
 
 html{
@@ -11,7 +12,6 @@ html{
 body{
 background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
 background-repeat: no-repeat;
-
 }
 
 main{
@@ -22,6 +22,7 @@ main{
   justify-content: center;
 }
 
-main .btn{
-  color: rgb(255, 30, 0);
+.btn:hover{
+  scale: 120%;
+  transition: 0.65s;
 }
