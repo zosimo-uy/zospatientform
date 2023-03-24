@@ -23,7 +23,7 @@ function savePatient () {
     });
 
     let patient = {
-        patientID: patientID.value,
+        patientID: patientID.innerText = (MyLib.generateUid()),
         firstName: firstName.value,
         middleName: middleName.value,
         lastName: lastName.value,
@@ -42,7 +42,8 @@ function savePatient () {
 
     let patientForms = storedPatientForms ? JSON.parse(storedPatientForms) : []; 
     patientForms.push(patient);
-    localStorage.setItem(patient.patientID, JSON.stringify(patientForms));
+
+    localStorage.setItem(`PatientList`, JSON.stringify(patientForms));
   
 }
 
@@ -66,3 +67,35 @@ window.onload = function() {
     // let btnRetrieve = document.getElementById("btnRetrieve");
     // btnRetrieve.onclick = carRetrieve;
 };
+
+/*use var as it changes the value of randomID*/
+var MyLib = {
+    //Add more zeros to increase the value.
+    lastUid : 100000000, 
+  
+    generateUid : function(){
+        this.lastUid++;
+        //Way to get a random int value betwen min and max: 
+        //Math.floor(Math.random() * (max - min) ) + min;
+        var randValue = Math.floor(Math.random() * (99999 - 10000)) + 10000;
+        return Number(this.lastUid.toString() + randValue);
+        
+    }
+  }
+  
+  function randomID(){
+    let randomID = document.getElementById(`patientIdBtn`);
+    let patientID = document.getElementById(`patientID`);
+  
+    if(randomID){
+      patientID.innerText = (MyLib.generateUid());
+      console.log(patientID.innerText);
+    }
+  }
+  
+  function run(){
+    document.querySelector(`#patientIdBtn`).addEventListener(`click`,function(){
+      randomID();
+    })
+  }
+  run();

@@ -26,19 +26,22 @@ color: #fff;
 
     <div class="row">
       <h3 class="p-2">Patient information</h3>
-      <div class="col-sm">
-        <input type="text" class="form-control row" id="patientID" name="patientID" required>
-        <label for="patientID" class="text-danger fs-5">Patient ID*</label>
+      <div class="row mb-2">
+        <button name="patientID" id="patientIdBtn" type="button" class="btn bg-success text-light fs-6 w-25">Generate your Patient ID</button>
       </div>
-      <div class="col-sm">
+      <div class="col-sm-3">
+        <p class="bg-light text-dark fs-6 form-control" disabled id="patientID"></p>
+       <label for="patientID" class="text-danger fs-5">Patient ID:</label>
+      </div>
+      <div class="col-sm-3">
         <input type="text" class="form-control row" name="firstName" id="firstName" required>
         <label for="firstName" class="text-danger fs-5">First Name*</label>
       </div>
-      <div class="col-sm">
+      <div class="col-sm-3">
         <input type="text" class="form-control row" name="middleName" id="middleName">
         <label for="middleName" class="text-light fs-5">Middle Name</label>
       </div>
-      <div class="col-sm">
+      <div class="col-sm-3">
         <input type="text" class="form-control row" name="lastName" id="lastName" required>
         <label for="lastName" class="text-danger fs-5">Last Name*</label>
       </div>
@@ -115,7 +118,7 @@ color: #fff;
   </div> -->
 
 
-
+  <script src="randomid.js"></script>
   <script src="index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
